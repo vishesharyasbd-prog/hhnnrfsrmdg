@@ -1,158 +1,168 @@
- <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GURU THE BRAND</title>
-
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-  min-height:100vh;
-  display:flex;
+ align-items:center;
   justify-content:center;
-  align-items:center;
-  padding:20px;
-  background:#080808;
-  color:white;
-  font-family:Arial,sans-serif;
-}
 
-.card{
   width:100%;
-  max-width:430px;
-  padding:40px 25px;
-  text-align:center;
-  background:#151515;
-  border:1px solid #333;
-  border-radius:25px;
-  box-shadow:0 20px 60px #000;
-}
+  height:70px;
 
-.logo{
-  width:85px;
-  height:85px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:white;
-  color:#111;
-  font-size:23px;
-  font-weight:bold;
-}
+  border-radius:15px;
 
-.badge{
-  display:inline-block;
-  margin-top:20px;
-  padding:8px 14px;
-  border-radius:30px;
-  background:#222;
-  color:#ddd;
-  font-size:13px;
-}
+  background:
+    linear-gradient(
+      135deg,
+      #9625ff,
+      #c158ff,
+      #9220ff
+    );
 
-.check{
-  color:#22c55e;
-}
+  color:white;
 
-h1{
-  margin-top:22px;
-  font-size:36px;
-  font-weight:900;
-}
-
-p{
-  margin:16px auto 25px;
-  max-width:340px;
-  color:#999;
-  line-height:1.6;
-}
-
-.join{
-  display:block;
-  padding:17px;
-  border-radius:14px;
-  background:white;
-  color:#111;
   text-decoration:none;
-  font-weight:bold;
-  font-size:16px;
+
+  font-size:20px;
+  font-weight:800;
+
+  box-shadow:
+    0 0 18px rgba(190,57,255,.9),
+    0 0 40px rgba(170,35,255,.75),
+    0 0 85px rgba(151,25,255,.55);
+
+  transition:.25s ease;
 }
 
 .join:hover{
-  transform:translateY(-2px);
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 0 25px rgba(210,80,255,1),
+    0 0 55px rgba(180,40,255,.9),
+    0 0 100px rgba(151,25,255,.7);
 }
 
+.join:active{
+  transform:scale(.98);
+}
+
+/* TRUST TEXT */
 .trust{
-  margin-top:16px;
-  color:#777;
+  margin-top:21px;
+
+  color:#9c8da5;
+
+  font-size:12px;
+}
+
+.trust b{
+  color:#c15aff;
+
+  text-shadow:
+    0 0 8px #a52cff;
+}
+
+/* FOOTER */
+.footer{
+  position:fixed;
+
+  z-index:2;
+
+  bottom:12px;
+
+  color:#75677b;
+
   font-size:11px;
 }
 
-.dot{
-  color:#22c55e;
-}
+/* MOBILE */
+@media(max-width:600px){
 
-.footer{
-  margin-top:25px;
-  padding-top:20px;
-  border-top:1px solid #292929;
-  color:#555;
-  font-size:10px;
+  body{
+    padding:15px;
+  }
+
+  .card{
+    padding:38px 22px 38px;
+
+    border-radius:27px;
+  }
+
+  .logo{
+    width:85px;
+    height:85px;
+  }
+
+  h1{
+    font-size:31px;
+  }
+
+  .description{
+    font-size:15px;
+  }
+
+  .join{
+    height:68px;
+    font-size:19px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NEON LINES -->
+<div class="rain">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- MAIN CARD -->
 <div class="card">
 
-  <div class="logo">GTB</div>
-
-  <div class="badge">
-    <span class="check">✓</span>
-    Official Channel
+  <div class="logo">
+    GTB
   </div>
 
-  <h1>GURU THE BRAND</h1>
+  <div class="badge">
+    ✓ Official Channel
+  </div>
 
-  <p>
-    Welcome to the official GURU THE BRAND channel.
-    Join our Telegram community and stay connected.
+  <h1>
+    GURU THE BRAND
+  </h1>
+
+  <p class="description">
+    Welcome to the official GURU THE BRAND community.
+    Join our Telegram channel and stay connected.
   </p>
 
   <a
     class="join"
     href="https://t.me/+zm-nDu_ZD48zYmU1"
-    onclick="trackSubscribe()"
+    target="_blank"
+    rel="noopener noreferrer"
   >
-    ➤ &nbsp; JOIN TELEGRAM
+    JOIN TELEGRAM
   </a>
 
   <div class="trust">
-    <span class="dot">●</span>
-    Secure &amp; Official Telegram Link
-  </div>
-
-  <div class="footer">
-    © 2026 GURU THE BRAND
+    🔒 <b>Secure</b>
+    &nbsp; • &nbsp;
+    ⚡ <b>Fast Updates</b>
+    &nbsp; • &nbsp;
+    📲 <b>Telegram</b>
   </div>
 
 </div>
 
-<script>
-function trackSubscribe(){
-  if(typeof fbq==="function"){
-    fbq("track","Subscribe",{
-      content_name:"GURU THE BRAND Telegram Channel",
-      content_category:"Telegram"
-    });
-  }
-}
-</script>
+<div class="footer">
+  © 2026 GURU THE BRAND
+</div>
 
 </body>
 </html>
