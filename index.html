@@ -1,105 +1,207 @@
- align-items:center;
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GURU THE BRAND</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  font-family:Arial,sans-serif;
+  background:
+    radial-gradient(circle at center,#4b0878 0%,#19052b 45%,#08030d 100%);
+  color:white;
+  overflow:hidden;
+}
+
+/* Glow */
+body::before{
+  content:"";
+  position:fixed;
+  width:350px;
+  height:350px;
+  background:#a42cff;
+  filter:blur(130px);
+  opacity:.35;
+}
+
+/* Neon lines */
+.rain{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+}
+
+.rain span{
+  position:absolute;
+  top:-80px;
+  width:2px;
+  height:55px;
+  background:#b84cff;
+  box-shadow:0 0 12px #a52cff;
+  animation:fall 4s linear infinite;
+}
+
+.rain span:nth-child(1){left:10%;animation-delay:-1s}
+.rain span:nth-child(2){left:25%;animation-delay:-3s}
+.rain span:nth-child(3){left:40%;animation-delay:-2s}
+.rain span:nth-child(4){left:58%;animation-delay:-4s}
+.rain span:nth-child(5){left:72%;animation-delay:-1s}
+.rain span:nth-child(6){left:88%;animation-delay:-2s}
+
+@keyframes fall{
+  from{transform:translateY(-100px)}
+  to{transform:translateY(110vh)}
+}
+
+/* Card */
+.card{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:520px;
+  padding:40px 28px;
+  text-align:center;
+  border-radius:28px;
+
+  background:rgba(28,12,42,.92);
+  border:1px solid rgba(183,75,255,.35);
+
+  box-shadow:
+    0 0 30px rgba(151,38,255,.3),
+    0 0 80px rgba(132,25,255,.2);
+}
+
+/* GTB */
+.logo{
+  width:90px;
+  height:90px;
+  margin:0 auto 22px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+  background:#f5f5f5;
+  color:#555;
+
+  font-size:22px;
+  font-weight:500;
+
+  border:4px solid #a52cff;
+
+  box-shadow:
+    0 0 15px #b83cff,
+    0 0 35px #a326ff,
+    0 0 65px rgba(164,39,255,.8);
+}
+
+/* Badge */
+.badge{
+  display:inline-block;
+  padding:7px 14px;
+  margin-bottom:16px;
+  border-radius:20px;
+
+  background:rgba(170,60,255,.15);
+  border:1px solid rgba(190,90,255,.3);
+
+  color:#dcb2ff;
+  font-size:13px;
+}
+
+/* Heading */
+h1{
+  font-size:36px;
+  margin-bottom:14px;
+
+  text-shadow:
+    0 0 12px #a52cff;
+}
+
+/* Text */
+.description{
+  color:#d8cde0;
+  line-height:1.6;
+  font-size:16px;
+  margin-bottom:28px;
+}
+
+/* Button */
+.join{
+  display:flex;
+  align-items:center;
   justify-content:center;
 
   width:100%;
-  height:70px;
+  height:68px;
 
-  border-radius:15px;
+  border-radius:14px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #9625ff,
-      #c158ff,
-      #9220ff
-    );
+  background:linear-gradient(
+    135deg,
+    #9625ff,
+    #bf54ff,
+    #9220ff
+  );
 
   color:white;
-
   text-decoration:none;
-
-  font-size:20px;
-  font-weight:800;
+  font-size:19px;
+  font-weight:bold;
 
   box-shadow:
-    0 0 18px rgba(190,57,255,.9),
-    0 0 40px rgba(170,35,255,.75),
-    0 0 85px rgba(151,25,255,.55);
+    0 0 20px rgba(174,48,255,.7),
+    0 0 55px rgba(151,25,255,.45);
 
-  transition:.25s ease;
+  transition:.2s;
 }
 
 .join:hover{
-  transform:translateY(-3px);
-
+  transform:translateY(-2px);
   box-shadow:
-    0 0 25px rgba(210,80,255,1),
-    0 0 55px rgba(180,40,255,.9),
-    0 0 100px rgba(151,25,255,.7);
+    0 0 30px rgba(194,69,255,.9),
+    0 0 70px rgba(151,25,255,.6);
 }
 
-.join:active{
-  transform:scale(.98);
-}
-
-/* TRUST TEXT */
 .trust{
-  margin-top:21px;
-
-  color:#9c8da5;
-
+  margin-top:20px;
+  color:#91839a;
   font-size:12px;
 }
 
-.trust b{
-  color:#c15aff;
-
-  text-shadow:
-    0 0 8px #a52cff;
-}
-
-/* FOOTER */
 .footer{
   position:fixed;
-
-  z-index:2;
-
   bottom:12px;
-
   color:#75677b;
-
   font-size:11px;
 }
 
-/* MOBILE */
 @media(max-width:600px){
-
-  body{
-    padding:15px;
-  }
-
   .card{
-    padding:38px 22px 38px;
-
-    border-radius:27px;
-  }
-
-  .logo{
-    width:85px;
-    height:85px;
+    padding:35px 22px;
   }
 
   h1{
     font-size:31px;
   }
 
-  .description{
-    font-size:15px;
-  }
-
-  .join{
-    height:68px;
-    font-size:19px;
+  .logo{
+    width:85px;
+    height:85px;
   }
 }
 </style>
@@ -107,12 +209,7 @@
 
 <body>
 
-<!-- NEON LINES -->
 <div class="rain">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
   <span></span>
   <span></span>
   <span></span>
@@ -121,20 +218,15 @@
   <span></span>
 </div>
 
-<!-- MAIN CARD -->
 <div class="card">
 
-  <div class="logo">
-    GTB
-  </div>
+  <div class="logo">GTB</div>
 
   <div class="badge">
     ✓ Official Channel
   </div>
 
-  <h1>
-    GURU THE BRAND
-  </h1>
+  <h1>GURU THE BRAND</h1>
 
   <p class="description">
     Welcome to the official GURU THE BRAND community.
@@ -151,11 +243,7 @@
   </a>
 
   <div class="trust">
-    🔒 <b>Secure</b>
-    &nbsp; • &nbsp;
-    ⚡ <b>Fast Updates</b>
-    &nbsp; • &nbsp;
-    📲 <b>Telegram</b>
+    🔒 Secure &nbsp; • &nbsp; ⚡ Fast Updates
   </div>
 
 </div>
