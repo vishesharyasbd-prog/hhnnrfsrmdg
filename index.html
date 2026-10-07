@@ -1,0 +1,119 @@
+.trust {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #777;
+      font-size: 11px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 10px rgba(34,197,94,0.6);
+    }
+
+    .footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      color: #555;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    @keyframes cardIn {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 420px) {
+      body {
+        padding: 14px;
+      }
+
+      .card {
+        padding: 34px 21px 22px;
+        border-radius: 20px;
+      }
+
+      .logo {
+        width: 76px;
+        height: 76px;
+        font-size: 22px;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .description {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="logo">GTB</div>
+
+    <div class="badge">
+      <span class="check">✓</span>
+      Official Channel
+    </div>
+
+    <h1>GURU THE BRAND</h1>
+
+    <p class="description">
+      Welcome to the official Guru The Brand channel.
+      Join our Telegram community and stay connected.
+    </p>
+
+    <div class="line"></div>
+
+    <a
+      class="join"
+      href="https://t.me/+zm-nDu_ZD48zYmU1"
+      onclick="trackSubscribe()"
+    >
+      <span class="telegram">➤</span>
+      JOIN TELEGRAM
+    </a>
+
+    <div class="trust">
+      <span class="dot"></span>
+      Secure &amp; Official Telegram Link
+    </div>
+
+    <div class="footer">
+      © 2026 GURU THE BRAND
+    </div>
+
+  </div>
+
+  <script>
+    function trackSubscribe() {
+      if (typeof fbq === "function") {
+        fbq("track", "Subscribe", {
+          content_name: "Guru The Brand Telegram Channel",
+          content_category: "Telegram"
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
